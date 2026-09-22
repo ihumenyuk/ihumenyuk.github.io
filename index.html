@@ -46,9 +46,11 @@
     overflow-x:auto;
     overflow-y:hidden;
     display:flex;
-    align-items:stretch;
+    /* columns hang from the top; the bottom of the page stays empty,
+       as in a printed spread */
+    align-items:flex-start;
     gap:var(--gap);
-    padding:46px 40px 40px;
+    padding:46px 40px 24vh;
     scrollbar-width:thin;
     scrollbar-color:var(--hair) transparent;
   }
@@ -59,7 +61,8 @@
   .col{
     flex:0 0 var(--col);
     width:var(--col);
-    height:100%;
+    height:auto;
+    max-height:100%;
     display:flex;
     flex-direction:column;
     /* a column longer than the screen scrolls on its own, with a hairline
@@ -103,7 +106,7 @@
     letter-spacing:.06em;
     text-transform:uppercase;
     color:var(--mid);
-    margin-top:auto;
+    margin-top:4px;
     padding-top:14px;
     line-height:1.5;
   }
@@ -168,7 +171,7 @@
   .masthead .links a{ display:block; width:max-content }
 
   .masthead .hint{
-    margin-top:auto;
+    margin-top:3em;
     font-size:9px;
     letter-spacing:.07em;
     text-transform:uppercase;
@@ -248,16 +251,11 @@
     <h2>The City's $16&nbsp;Billion Books</h2>
     <p class="lede">S.F. budget cuts are coming. Here's our guide to the city's
     $16&nbsp;billion books.</p>
-    <p>San Francisco publishes a budget almost nobody can read. This guide takes the
-    published documents apart and rebuilds them into something a reader can follow:
-    a treemap of every department at once, against a projected six hundred and seven
-    million dollar deficit and a mayor promising painful cuts.</p>
-    <p>The detail is where it gets interesting. The city's general hospital projects
-    a ninety-four million dollar deficit; the sheriff's department was on track to
-    exhaust its budget by early June on deputy overtime; homelessness and supportive
-    housing underspent its allocation by thirty-four million. Federal money rose two
-    hundred and eleven per cent in one year and fell fifty-three per cent the next,
-    which is why a reserve now sits behind it.</p>
+    <p>San Francisco publishes a budget almost nobody can read. This guide rebuilds
+    it as a treemap of every department at once, against a projected $607m deficit:
+    a general hospital $94m short, a sheriff's department on track to exhaust its
+    budget on overtime, and federal money that rose 211 per cent in a year and then
+    fell 53 per cent.</p>
     <figure class="drop-1">
       <img src="images/sf-city-budget.png"
            alt="Treemap of San Francisco's 16 billion dollar budget, each department sized by spending and grouped by colour, from public health at 3.4 billion down to departments under 200 million"
@@ -272,23 +270,13 @@
   <!-- ============ AI jobs ============ -->
   <section class="col">
     <h2>Is AI Stealing Jobs?</h2>
-    <p class="lede">A self-directed data explainer testing the most repeated claim
-    in the labour debate against the official numbers.</p>
-    <p>Working from the Bureau of Labor Statistics Occupational Employment and Wage
-    Statistics release, the piece tracks thirty occupations expected to be most
-    exposed to artificial intelligence and compares a decade of employment change,
-    2014 to 2024, against the fourteen per cent national average.</p>
-    <p>The finding runs against the headline: most of the professions in decline are
-    small ones. The largest collapse sits in food service, some four hundred and
-    twenty thousand jobs short of where growth would have put it &mdash; a sector
-    nobody blames on automation. White-collar employment has been flat since 2009
-    even as the number of graduates climbed.</p>
-    <p>The reporting rests on interviews as much as on the spreadsheet: Jeremy
-    Merrill of The Washington Post, David Marguerite of LISER on automation versus
-    augmentation, Richard Sylla of New York University, and David Autor of MIT by
-    email. The story is less about machines replacing people than about oversupply,
-    offshoring, and a labour market that stopped absorbing graduates fifteen years
-    ago.</p>
+    <p class="lede">A self-directed data explainer testing the labour debate's most
+    repeated claim against the official numbers.</p>
+    <p>Thirty occupations, a decade of Bureau of Labor Statistics employment data,
+    and a finding that runs against the headline: the professions in decline are
+    mostly small ones, the largest collapse sits in food service, and white-collar
+    work stopped growing in 2009. Reported with Jeremy Merrill, David Marguerite,
+    Richard Sylla and David Autor.</p>
     <figure class="drop-1">
       <img src="images/end-white-collar-boom.png"
            alt="Line chart of white-collar jobs as a share of total US employment, 1985 to 2024, rising 8.14 per cent before 2009 and only 1.43 per cent after"
@@ -306,25 +294,15 @@
   <section class="col">
     <h2>A Tale of Two Mosques</h2>
     <p class="lede">How one Orthodox-majority government oppresses Islam.</p>
-    <p>Reported from Batumi, Adjara and Samtskhe-Javakheti for a Columbia thesis,
-    the piece follows two people. Tamar Gelashvili, a documentary filmmaker
-    campaigning to preserve historic mosques, is coerced into informing by the
-    secret police after being threatened at gunpoint. Tariel Nakaidze spends a
-    decade seeking a permit for a second mosque in Batumi, gathering more than
-    twelve thousand signatures and being refused anyway.</p>
-    <p>The argument is made partly in photographs: painted domes and plaster
-    ceilings in buildings the state declines to protect.</p>
+    <p>Reported from Batumi and Adjara for a Columbia thesis. Tamar Gelashvili, a
+    filmmaker campaigning to preserve historic mosques, is coerced into informing by
+    the secret police. Tariel Nakaidze spends a decade seeking a permit for a second
+    mosque in Batumi, gathers 12,000 signatures, and is refused anyway.</p>
     <figure class="drop-1 narrow">
       <img src="images/IMG_3094.jpg"
            alt="Interior of a wooden mosque in Georgia: panelled walls, prayer rugs, an arched window onto snow"
            loading="lazy" width="750" height="1000">
       <figcaption>A village mosque interior, Adjara.</figcaption>
-    </figure>
-    <figure class="half">
-      <img src="images/IMG_3381.jpg"
-           alt="Painted dome ceiling with floral medallions and Arabic inscriptions in muted colour"
-           loading="lazy" width="1000" height="750">
-      <figcaption>Painted dome.</figcaption>
     </figure>
     <p class="meta">Columbia thesis &middot; Reported in Georgia &middot;
     <a href="https://ihumenyuk.github.io/batumi-mosque/">Read it</a></p>
@@ -405,9 +383,9 @@
     public-policy dimensions of architecture: why genuinely sustainable pavilions
     are so hard to build, how the experience economy pushed hostels toward boutique
     design, and the difficulty of preserving heritage buildings across Europe.</p>
-    <p>Further bylines in Azure and The Architect's Newspaper. A degree in
-    architecture from Waterloo underneath all of it, which is mostly useful now as a
-    way of explaining things visually.</p>
+    <p>Further bylines in Azure and The Architect's Newspaper, over a Waterloo
+    architecture degree that is mostly useful now as a way of explaining things
+    visually.</p>
     <figure class="drop-1 half">
       <img src="images/IMG_3126.jpg"
            alt="Architectural photograph made while reporting in Adjara, Georgia"
