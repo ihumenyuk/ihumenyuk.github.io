@@ -128,6 +128,26 @@
     height:auto;
     background:#eee;
   }
+
+  /* Images sit desaturated and come up in colour under the cursor, so the
+     spread reads as one grey field until you single a piece out. Gated on
+     hover-capable pointers: on a phone there is no hover, so nothing there
+     would ever return to colour. */
+  @media (hover:hover) and (pointer:fine){
+    figure img{
+      filter:grayscale(1) contrast(1.12) brightness(.94);
+      opacity:.55;
+      transition:filter .45s ease, opacity .45s ease;
+    }
+    figure:hover img,
+    figure:focus-within img{
+      filter:grayscale(0) contrast(1) brightness(1);
+      opacity:1;
+    }
+  }
+  @media (prefers-reduced-motion:reduce){
+    figure img{ transition:none }
+  }
   figcaption{
     font-size:8px;
     line-height:1.42;
