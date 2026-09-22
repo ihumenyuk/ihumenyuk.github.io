@@ -140,8 +140,9 @@
   .drop-4{ margin-top:210px }
   .drop-5{ margin-top:300px }
 
-  .narrow{ width:72% }
-  .half{ width:56% }
+  /* narrow the image only — the caption keeps the full column measure */
+  .narrow img{ width:72% }
+  .half img{ width:56% }
 
   /* ---- masthead ------------------------------------------------------ */
 
@@ -260,18 +261,21 @@
     <h2>Is AI Stealing Jobs?</h2>
     <p class="lede">A self-directed data explainer testing the most repeated claim
     in the labour debate against the official numbers.</p>
-    <p>Working from Bureau of Labor Statistics data, the piece tracks thirty
-    occupations expected to be most exposed to artificial intelligence across a
-    decade of employment change, 2014 to 2024.</p>
-    <p>The finding runs against the headline: the professions in decline are mostly
-    small ones, the largest collapse sits in food service, and white-collar
-    employment has been flat since 2009 even as the number of graduates climbed.</p>
-    <figure>
+    <p>Thirty occupations and a decade of Bureau of Labor Statistics data. The
+    finding runs against the headline: the professions in decline are mostly small
+    ones, and white-collar work has been flat since 2009.</p>
+    <figure class="narrow">
       <img src="images/end-white-collar-boom.png"
            alt="Line chart of white-collar jobs as a share of total US employment, 1985 to 2024, rising 8.14 per cent before 2009 and only 1.43 per cent after"
            loading="lazy" width="1498" height="974">
-      <figcaption>The white-collar share stopped growing in 2009, long before the
-      current wave of AI.</figcaption>
+      <figcaption>The white-collar share, flat since 2009.</figcaption>
+    </figure>
+    <figure class="narrow">
+      <img src="images/professions-in-decline.png"
+           alt="Bubble chart of occupations sized by employment, plotted by growth rate from minus 20 to plus 40 per cent; those in the shaded band grew slower than the 14 per cent national average, with food preparation and serving the largest by far"
+           loading="lazy" width="1105" height="1322">
+      <figcaption>The exception is food service: 420,000 jobs short of the national
+      growth rate.</figcaption>
     </figure>
     <p class="meta">Independent project &middot; BLS data, RAWGraphs &middot;
     <a href="https://ihumenyuk.github.io/ai-us-jobs/">Read it</a></p>
