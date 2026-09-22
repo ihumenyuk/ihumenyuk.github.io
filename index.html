@@ -10,6 +10,7 @@
   :root{
     --ink:#111;
     --mid:#666;
+    --body:#717171;
     --hair:#d8d8d8;
     --paper:#fbfbf9;
     --col:172px;
@@ -50,7 +51,7 @@
        as in a printed spread */
     align-items:flex-start;
     gap:var(--gap);
-    padding:46px 40px 19vh;
+    padding:46px 40px 17vh;
     scrollbar-width:thin;
     scrollbar-color:var(--hair) transparent;
   }
@@ -95,6 +96,7 @@
     hyphens:none;
     -webkit-hyphens:none;
     font-weight:500;
+    color:var(--body);
   }
 
   .col p:first-of-type{ margin-top:0 }
@@ -159,6 +161,7 @@
     font-size:11px;
     line-height:1.5;
     font-weight:500;
+    color:var(--body);
     margin:0 0 1.4em;
     text-align:left;
     hyphens:none;
@@ -260,17 +263,10 @@
   <section class="col">
     <h2>Is AI Stealing Jobs?</h2>
     <p class="lede">A self-directed explainer testing the labour debate's most
-    repeated claim against the official numbers.</p>
-    <p>Thirty occupations expected to be most exposed to artificial intelligence,
-    tracked against a decade of Bureau of Labor Statistics employment data, 2014 to
-    2024, and measured against the 14 per cent national average.</p>
-    <p>The finding runs against the headline: most professions in decline are small
-    ones. The largest collapse sits in food service, 420,000 jobs short of where
-    growth would have put it, a sector nobody blames on automation. White-collar
-    employment has been flat since 2009 even as graduate numbers climbed.</p>
-    <p>Reported with Jeremy Merrill of The Washington Post, David Marguerite of
-    LISER on automation versus augmentation, Richard Sylla of New York University,
-    and David Autor of MIT by email.</p>
+    repeated claim.</p>
+    <p>Thirty occupations against a decade of Bureau of Labor Statistics data. The
+    professions in decline are mostly small; the largest is food service, 420,000
+    jobs short.</p>
     <figure>
       <img src="images/end-white-collar-boom.png"
            alt="Line chart of white-collar jobs as a share of total US employment, 1985 to 2024, rising 8.14 per cent before 2009 and only 1.43 per cent after"
@@ -281,9 +277,9 @@
       <img src="images/professions-in-decline.png"
            alt="Bubble chart of occupations sized by employment, plotted by growth rate from minus 20 to plus 40 per cent; those in the shaded band grew slower than the 14 per cent national average, with food preparation and serving the largest by far"
            loading="lazy" width="1105" height="1322">
-      <figcaption>Food service: 420,000 jobs short.</figcaption>
+      <figcaption>Occupations sized by employment.</figcaption>
     </figure>
-    <p class="meta">Independent project &middot;
+    <p class="meta">Merrill, Marguerite, Sylla, Autor &middot;
     <a href="https://ihumenyuk.github.io/ai-us-jobs/">Read it</a></p>
   </section>
 
