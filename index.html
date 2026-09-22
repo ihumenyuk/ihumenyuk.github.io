@@ -25,6 +25,10 @@
     color:var(--ink);
     font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
     -webkit-font-smoothing:antialiased;
+    /* no broken words, anywhere */
+    hyphens:none;
+    -webkit-hyphens:none;
+    -ms-hyphens:none;
   }
 
   .skip{
@@ -58,7 +62,16 @@
     height:100%;
     display:flex;
     flex-direction:column;
+    /* a column longer than the screen scrolls on its own, with a hairline
+       to say so — nothing is ever silently clipped */
+    overflow-y:auto;
+    scrollbar-width:thin;
+    scrollbar-color:var(--hair) transparent;
+    padding-right:4px;
   }
+  .col::-webkit-scrollbar{ width:3px }
+  .col::-webkit-scrollbar-thumb{ background:var(--hair); border-radius:3px }
+  .col::-webkit-scrollbar-track{ background:transparent }
 
   /* ---- type ---------------------------------------------------------- */
 
@@ -75,9 +88,9 @@
     margin:0 0 .85em;
     font-size:11.5px;
     line-height:1.52;
-    text-align:justify;
-    hyphens:auto;
-    -webkit-hyphens:auto;
+    text-align:left;
+    hyphens:none;
+    -webkit-hyphens:none;
     font-weight:300;
   }
 
@@ -244,7 +257,13 @@
     twenty thousand jobs short of where growth would have put it &mdash; a sector
     nobody blames on automation. White-collar employment has been flat since 2009
     even as the number of graduates climbed.</p>
-    <figure class="drop-1">
+    <p>The reporting rests on interviews as much as on the spreadsheet: Jeremy
+    Merrill of The Washington Post, David Marguerite of LISER on automation versus
+    augmentation, Richard Sylla of New York University, and David Autor of MIT by
+    email. The story is less about machines replacing people than about oversupply,
+    offshoring, and a labour market that stopped absorbing graduates fifteen years
+    ago.</p>
+    <figure class="drop-1 narrow">
       <img src="images/template-full.jpg"
            alt="Bubble chart in blues showing employment change across occupations, plotted over a faint bar chart"
            loading="lazy" width="800" height="1000">
@@ -253,22 +272,6 @@
     </figure>
     <p class="meta">Independent project &middot; BLS data, RAWGraphs &middot;
     <a href="https://ihumenyuk.github.io/ai-us-jobs/">Read it</a></p>
-  </section>
-
-  <!-- ============ AI jobs, sourcing ============ -->
-  <section class="col">
-    <h2>On Method</h2>
-    <p>The reporting is built on interviews as much as on the spreadsheet. Jeremy
-    Merrill of The Washington Post on why the newest models resist explanation;
-    David Marguerite of LISER on the distinction between automation and
-    augmentation; Richard Sylla of New York University on the long history of
-    technological panic; and David Autor of MIT, by email, on what job loss actually
-    does to people.</p>
-    <p>Computer science degrees have grown roughly eighteen hundred per cent since
-    1970. The jobs have not kept pace. The story that emerges is less about machines
-    replacing people than about oversupply, offshoring, and a labour market that
-    stopped absorbing graduates fifteen years ago.</p>
-    <p class="meta">Reporting &middot; Interviews &middot; Analysis</p>
   </section>
 
   <div class="gutter" role="presentation"></div>
@@ -283,35 +286,22 @@
     secret police after being threatened at gunpoint. Tariel Nakaidze spends a
     decade seeking a permit for a second mosque in Batumi, gathering more than
     twelve thousand signatures and being refused anyway.</p>
-    <figure class="drop-2">
+    <p>The argument is made partly in photographs: painted domes and plaster
+    ceilings in buildings the state declines to protect.</p>
+    <figure class="drop-1 narrow">
       <img src="images/IMG_3094.jpg"
            alt="Interior of a wooden mosque in Georgia: panelled walls, prayer rugs, an arched window onto snow"
            loading="lazy" width="750" height="1000">
       <figcaption>A village mosque interior, Adjara.</figcaption>
     </figure>
-    <p class="meta">Columbia thesis &middot; Reported in Georgia &middot;
-    <a href="https://ihumenyuk.github.io/batumi-mosque/">Read it</a></p>
-  </section>
-
-  <!-- ============ Mosques, image column ============ -->
-  <section class="col">
-    <h2>What Is Being Lost</h2>
-    <p>The argument is made partly in photographs: painted domes, carved galleries
-    and plaster ceilings in buildings the state declines to protect, some of them
-    under scaffolding, some of them simply left.</p>
-    <figure class="drop-1">
+    <figure class="half">
       <img src="images/IMG_3381.jpg"
            alt="Painted dome ceiling with floral medallions and Arabic inscriptions in muted colour"
            loading="lazy" width="1000" height="750">
-      <figcaption>Painted dome, interior.</figcaption>
+      <figcaption>Painted dome.</figcaption>
     </figure>
-    <figure>
-      <img src="images/IMG_3347.jpg"
-           alt="A second painted dome in white and gold, scaffolding visible at the edge of the frame"
-           loading="lazy" width="1000" height="750">
-      <figcaption>Restoration in progress.</figcaption>
-    </figure>
-    <p class="meta">Photography &middot; Georgia, 2024</p>
+    <p class="meta">Columbia thesis &middot; Reported in Georgia &middot;
+    <a href="https://ihumenyuk.github.io/batumi-mosque/">Read it</a></p>
   </section>
 
   <!-- ============ SF budget ============ -->
