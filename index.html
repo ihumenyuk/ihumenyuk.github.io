@@ -12,8 +12,8 @@
     --mid:#666;
     --hair:#d8d8d8;
     --paper:#fbfbf9;
-    --col:118px;
-    --gap:17px;
+    --col:172px;
+    --gap:22px;
   }
 
   *{box-sizing:border-box}
@@ -50,7 +50,7 @@
        as in a printed spread */
     align-items:flex-start;
     gap:var(--gap);
-    padding:46px 40px 24vh;
+    padding:46px 40px 19vh;
     scrollbar-width:thin;
     scrollbar-color:var(--hair) transparent;
   }
@@ -80,7 +80,7 @@
 
   h2{
     margin:0 0 .5em;
-    font-size:8.5px;
+    font-size:9.5px;
     font-weight:700;
     letter-spacing:.07em;
     text-transform:uppercase;
@@ -89,8 +89,8 @@
 
   .col p{
     margin:0 0 .85em;
-    font-size:9.6px;
-    line-height:1.46;
+    font-size:11px;
+    line-height:1.45;
     text-align:left;
     hyphens:none;
     -webkit-hyphens:none;
@@ -102,7 +102,7 @@
   .lede{ font-weight:400 }
 
   .col .meta{
-    font-size:7.5px;
+    font-size:8px;
     letter-spacing:.05em;
     text-transform:uppercase;
     color:var(--mid);
@@ -127,7 +127,7 @@
     background:#eee;
   }
   figcaption{
-    font-size:7.2px;
+    font-size:8px;
     line-height:1.42;
     color:var(--mid);
     margin-top:5px;
@@ -147,16 +147,16 @@
 
   /* ---- masthead ------------------------------------------------------ */
 
-  .masthead{ flex-basis:150px; width:150px }
+  .masthead{ flex-basis:190px; width:190px }
   .masthead h1{
-    font-size:18px;
+    font-size:21px;
     line-height:1.08;
     font-weight:700;
     letter-spacing:-.015em;
     margin:0 0 .6em;
   }
   .masthead .role{
-    font-size:9.8px;
+    font-size:11px;
     line-height:1.5;
     font-weight:300;
     margin:0 0 1.4em;
@@ -165,7 +165,7 @@
     -webkit-hyphens:none;
   }
   .masthead .links{
-    font-size:8px;
+    font-size:8.5px;
     letter-spacing:.05em;
     text-transform:uppercase;
     line-height:2;
@@ -174,7 +174,7 @@
 
   .masthead .hint{
     margin-top:3em;
-    font-size:7.5px;
+    font-size:8px;
     letter-spacing:.07em;
     text-transform:uppercase;
     color:var(--mid);
@@ -244,32 +244,30 @@
     <p>San Francisco publishes a budget almost nobody can read. This guide rebuilds
     it as a treemap of every department at once, against a projected $607m deficit:
     a general hospital $94m short, a sheriff's department on track to exhaust its
-    budget on overtime, and federal money that rose 211 per cent in a year and then
-    fell 53 per cent.</p>
+    budget on overtime, and federal money that swung 211 per cent in a year.</p>
     <figure class="drop-1">
       <img src="images/sf-city-budget.png"
            alt="Treemap of San Francisco's 16 billion dollar budget, each department sized by spending and grouped by colour, from public health at 3.4 billion down to departments under 200 million"
            loading="lazy" width="1540" height="1200">
       <figcaption>Every department, sized by spending. Public health $3.4B, the
-      PUC $2.1B, the airport $1.8B, police $849.5M.</figcaption>
+      airport $1.8B, police $849.5M.</figcaption>
     </figure>
-    <p class="meta">Mission Local &middot; With Kelly Waldron &middot; May 2026
-    &middot; <a href="https://missionlocal.org/2026/05/explore-san-francisco-2025-2026-budget/">Read it</a></p>
+    <p class="meta">Mission Local &middot; With Kelly Waldron &middot;
+    <a href="https://missionlocal.org/2026/05/explore-san-francisco-2025-2026-budget/">Read it</a></p>
   </section>
 
   <!-- ============ AI jobs ============ -->
   <section class="col">
     <h2>Is AI Stealing Jobs?</h2>
-    <p class="lede">A self-directed data explainer testing the most repeated claim
-    in the labour debate against the official numbers.</p>
-    <p>Thirty occupations and a decade of Bureau of Labor Statistics data. The
-    finding runs against the headline: the professions in decline are mostly small
-    ones, and white-collar work has been flat since 2009.</p>
+    <p class="lede">A self-directed explainer testing the labour debate's most
+    repeated claim against the official numbers.</p>
+    <p>Thirty occupations and a decade of Bureau of Labor Statistics data, against
+    the headline: the professions in decline are mostly small ones.</p>
     <figure>
       <img src="images/end-white-collar-boom.png"
            alt="Line chart of white-collar jobs as a share of total US employment, 1985 to 2024, rising 8.14 per cent before 2009 and only 1.43 per cent after"
            loading="lazy" width="1498" height="974">
-      <figcaption>The white-collar share, flat since 2009.</figcaption>
+      <figcaption>White-collar share, flat since 2009.</figcaption>
     </figure>
     <figure>
       <img src="images/professions-in-decline.png"
@@ -286,9 +284,9 @@
     <h2>A Tale of Two Mosques</h2>
     <p class="lede">How one Orthodox-majority government oppresses Islam.</p>
     <p>Reported from Batumi and Adjara for a Columbia thesis. Tamar Gelashvili, a
-    filmmaker campaigning to preserve historic mosques, is coerced into informing by
-    the secret police. Tariel Nakaidze spends a decade seeking a permit for a second
-    mosque in Batumi, gathers 12,000 signatures, and is refused anyway.</p>
+    filmmaker preserving historic mosques, is coerced into informing by the secret
+    police. Tariel Nakaidze spends a decade seeking a permit for a second mosque,
+    gathers 12,000 signatures, and is refused.</p>
     <figure class="drop-1 narrow">
       <img src="images/IMG_3094.jpg"
            alt="Interior of a wooden mosque in Georgia: panelled walls, prayer rugs, an arched window onto snow"
@@ -370,8 +368,8 @@
     <h2>On the Built Environment</h2>
     <p>Forty-plus articles for Frame in Amsterdam on the sustainability and
     public-policy dimensions of architecture: why genuinely sustainable pavilions
-    are so hard to build, how the experience economy pushed hostels toward boutique
-    design, and the difficulty of preserving heritage buildings across Europe.</p>
+    are so hard to build, and how the experience economy pushed hostels toward
+    boutique design.</p>
     <p>Further bylines in Azure and The Architect's Newspaper, over a Waterloo
     architecture degree that is mostly useful now as a way of explaining things
     visually.</p>
