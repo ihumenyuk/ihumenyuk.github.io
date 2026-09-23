@@ -148,6 +148,12 @@
   .narrow img{ width:72% }
   .half img{ width:56% }
 
+  /* two photographs side by side, so a column can carry three frames
+     in the height one full-width portrait would take */
+  .pair{ display:grid; grid-template-columns:1fr 1fr; gap:5px }
+  .pair img{ width:100% }
+  .pair figcaption{ grid-column:1 / -1 }
+
   /* ---- masthead ------------------------------------------------------ */
 
   .masthead{ flex-basis:190px; width:190px }
@@ -252,7 +258,7 @@
     <figure class="drop-1">
       <img src="images/sf-city-budget.png"
            alt="Treemap of San Francisco's 16 billion dollar budget, each department sized by spending and grouped by colour, from public health at 3.4 billion down to departments under 200 million"
-           loading="lazy" width="1540" height="1200">
+           loading="lazy" width="1556" height="1188">
       <figcaption>Every department, sized by spending. Public health $3.4B, the
       airport $1.8B, police $849.5M.</figcaption>
     </figure>
@@ -299,7 +305,7 @@
     <figure>
       <img src="images/professions-in-decline.png"
            alt="Bubble chart of occupations sized by employment, plotted by growth rate from minus 20 to plus 40 per cent; those in the shaded band grew slower than the 14 per cent national average, with food preparation and serving the largest by far"
-           loading="lazy" width="1105" height="1322">
+           loading="lazy" width="1114" height="1320">
       <figcaption>Occupations sized by employment.</figcaption>
     </figure>
     <p class="meta">Merrill, Sylla, Autor &middot;
@@ -320,7 +326,7 @@
     <figure>
       <img src="images/dog-licensing.png"
            alt="Map of San Francisco shading each zip code by its most common dog breed: Labradors green across the west, Chihuahuas purple across the east, German Shepherds blue along the northern waterfront"
-           loading="lazy" width="1456" height="1710">
+           loading="lazy" width="1440" height="1658">
       <figcaption>Most common breed by first registration, by zip code.</figcaption>
     </figure>
     <p class="meta">Mission Local &middot; Python, GeoPandas, Datawrapper</p>
@@ -428,11 +434,20 @@
     filmmaker preserving historic mosques, is coerced into informing by the secret
     police. Tariel Nakaidze spends a decade seeking a permit for a second mosque,
     gathers 12,000 signatures, and is refused.</p>
-    <figure class="drop-1 narrow">
-      <img src="images/IMG_3094.jpg"
-           alt="Interior of a wooden mosque in Georgia: panelled walls, prayer rugs, an arched window onto snow"
+    <figure class="drop-1">
+      <img src="images/IMG_3381.jpg"
+           alt="A painted mosque dome seen from below, a floral rosette ringed by bands of ornament"
+           loading="lazy" width="1000" height="750">
+      <figcaption>A painted dome, Adjara.</figcaption>
+    </figure>
+    <figure class="pair">
+      <img src="images/IMG_3239.jpg"
+           alt="A window cut through a thick stone wall, opening onto hills and a village beyond"
            loading="lazy" width="750" height="1000">
-      <figcaption>A village mosque interior, Adjara.</figcaption>
+      <img src="images/IMG_3339.jpg"
+           alt="A carved wooden door set into a stone wall, crossed by the shadow of a tree"
+           loading="lazy" width="750" height="1000">
+      <figcaption>A window cut through stone; a carved door.</figcaption>
     </figure>
     <p class="meta">Columbia thesis &middot; Reported in Georgia &middot;
     <a href="https://ihumenyuk.github.io/batumi-mosque/">Read it</a></p>
@@ -503,7 +518,7 @@
     <figure class="drop-1 half">
       <img src="images/IMG_3126.jpg"
            alt="Architectural photograph made while reporting in Adjara, Georgia"
-           loading="lazy" width="560" height="750">
+           loading="lazy" width="1000" height="750">
       <figcaption>Adjara, Georgia &mdash; from the mosque reporting.</figcaption>
     </figure>
     <p class="meta">Frame &middot; Azure &middot; The Architect's Newspaper</p>
