@@ -151,6 +151,13 @@
   /* a single photograph shown in monochrome; the file itself is untouched */
   .mono img{ filter:grayscale(1) contrast(1.08) }
 
+  /* images link to the piece they illustrate */
+  .col figure a{ display:block; border-bottom:0; padding-bottom:0 }
+  .col figure img{ transition:opacity .2s ease }
+  @media (hover:hover) and (pointer:fine){
+    .col figure a:hover img{ opacity:.85 }
+  }
+
   /* two photographs side by side, so a column can carry three frames
      in the height one full-width portrait would take */
   .pair{ display:grid; grid-template-columns:1fr 1fr; gap:5px }
@@ -262,9 +269,9 @@
     department they care about and see it sized against everything else the city
     spends.</p>
     <figure class="drop-1">
-      <img src="images/sf-city-budget.png"
+      <a href="https://missionlocal.org/2026/05/explore-san-francisco-2025-2026-budget/" target="_blank" rel="noopener"><img src="images/sf-city-budget.png"
            alt="Treemap of San Francisco's 16 billion dollar budget, each department sized by spending and grouped by colour, from public health at 3.4 billion down to departments under 200 million"
-           loading="lazy" width="1556" height="1188">
+           loading="lazy" width="1556" height="1188"></a>
       <figcaption>Every department, sized by spending. Public health $3.4B, the
       airport $1.8B, police $849.5M.</figcaption>
     </figure>
@@ -286,9 +293,9 @@
     records &mdash; the only dataset that says which rooms have cooling &mdash; and
     matched against neighbourhood income.</p>
     <figure>
-      <img src="images/classroom-ac-map.png"
+      <a href="https://ihumenyuk.github.io/extreme-heat-new-york/" target="_blank" rel="noopener"><img src="images/classroom-ac-map.png"
            alt="Choropleth map of New York City shading each neighbourhood by the share of air-conditioned classrooms, with East Queens and Central Brooklyn lowest"
-           loading="lazy" width="1220" height="1706">
+           loading="lazy" width="1220" height="1706"></a>
       <figcaption>Darker orange is better provisioned. Queens Village sits at 18 per
       cent.</figcaption>
     </figure>
@@ -309,15 +316,15 @@
     is where the claim thins: the occupations shrinking fastest are among the
     smallest. White-collar share has been flat since 2009.</p>
     <figure>
-      <img src="images/end-white-collar-boom.png"
+      <a href="https://ihumenyuk.github.io/ai-us-jobs/" target="_blank" rel="noopener"><img src="images/end-white-collar-boom.png"
            alt="Line chart of white-collar jobs as a share of total US employment, 1985 to 2024, rising 8.14 per cent before 2009 and only 1.43 per cent after"
-           loading="lazy" width="1498" height="974">
+           loading="lazy" width="1498" height="974"></a>
       <figcaption>White-collar share, flat since 2009.</figcaption>
     </figure>
     <figure>
-      <img src="images/professions-in-decline.png"
+      <a href="https://ihumenyuk.github.io/ai-us-jobs/" target="_blank" rel="noopener"><img src="images/professions-in-decline.png"
            alt="Bubble chart of occupations sized by employment, plotted by growth rate from minus 20 to plus 40 per cent; those in the shaded band grew slower than the 14 per cent national average, with food preparation and serving the largest by far"
-           loading="lazy" width="1114" height="1320">
+           loading="lazy" width="1114" height="1320"></a>
       <figcaption>Occupations sized by employment.</figcaption>
     </figure>
     <p class="meta">Merrill, Sylla, Autor &middot;
@@ -336,12 +343,13 @@
     <p>In 94103 alone, Chihuahuas were registered more than 750 times in a decade,
     the densest concentration of any breed in the city.</p>
     <figure>
-      <img src="images/dog-licensing.png"
+      <a href="https://missionlocal.org/2026/06/san-francisco-dog-data-labradors-chihuahuas/" target="_blank" rel="noopener"><img src="images/dog-licensing.png"
            alt="Map of San Francisco shading each zip code by its most common dog breed: Labradors green across the west, Chihuahuas purple across the east, German Shepherds blue along the northern waterfront"
-           loading="lazy" width="1440" height="1658">
+           loading="lazy" width="1440" height="1658"></a>
       <figcaption>Most common breed by first registration, by zip code.</figcaption>
     </figure>
-    <p class="meta">Mission Local &middot; Python, GeoPandas, Datawrapper</p>
+    <p class="meta">Mission Local &middot; Python, GeoPandas, Datawrapper &middot;
+    <a href="https://missionlocal.org/2026/06/san-francisco-dog-data-labradors-chihuahuas/">Read it</a></p>
   </section>
 
   <!-- ============ SoMa containment zone ============ -->
@@ -357,9 +365,9 @@
     <p>The chart maps calls for service per intersection across three months. Almost
     a quarter came from the 6th Street corridor alone.</p>
     <figure>
-      <img src="images/soma-containment-zone.jpg"
+      <a href="https://missionlocal.org/2026/04/san-francisco-western-soma-crime-containment-zone/" target="_blank" rel="noopener"><img src="images/soma-containment-zone.jpg"
            alt="Three-dimensional map of SoMa in San Francisco with a bar rising from each intersection in proportion to its calls for service, clustered densely around the 6th Street corridor"
-           loading="lazy" width="1354" height="1266">
+           loading="lazy" width="1354" height="1266"></a>
       <figcaption>Calls for service per intersection, December 2025 to March
       2026. Source: SF Open Data.</figcaption>
     </figure>
@@ -381,9 +389,9 @@
     at SOMArts. The Mission Cultural Center closed in January. City Hall has since agreed to
     pay grants up front.</p>
     <figure class="drop-1">
-      <img src="images/grant-funding-sf.png"
+      <a href="https://missionlocal.org/2026/03/sf-cultural-centers-somarts-mccla-arts-centers/" target="_blank" rel="noopener"><img src="images/grant-funding-sf.png"
            alt="Four small area charts comparing annual San Francisco Arts Commission grants from 2014 to 2024: the African American Art and Culture Complex rises sharply past $2.5 million while Bayview Opera House, the Mission Cultural Center for Latino Arts and SOMArts stay roughly flat below $1 million"
-           loading="lazy" width="1600" height="674">
+           loading="lazy" width="1600" height="674"></a>
       <figcaption>Total grants received from the Arts Commission by year, 2014 to
       2024. Fiscal years begin 1 July.</figcaption>
     </figure>
@@ -403,15 +411,15 @@
     taken a second address in Mission Bay; Breadbelly, Souvla and Standard Deviant
     have done the same in Dogpatch.</p>
     <figure>
-      <img src="images/mission-bay-food-map.png"
+      <a href="https://missionlocal.org/2026/05/san-francisco-mission-bay-restaurants/" target="_blank" rel="noopener"><img src="images/mission-bay-food-map.png"
            alt="Map of San Francisco with coloured arcs curving from neighbourhoods across the city to Mission Bay, each labelled with a restaurant: Arsicault, Cafe Reveille, Burma Superstar, Che Fico, House of Tadu, Gus's Community Market, Trick Dog and Flour + Water"
-           loading="lazy" width="1101" height="1061">
+           loading="lazy" width="1101" height="1061"></a>
       <figcaption>Outposts in Mission Bay, May 2026.</figcaption>
     </figure>
     <figure>
-      <img src="images/dogpatch-food-map.png"
+      <a href="https://missionlocal.org/2026/05/san-francisco-mission-bay-restaurants/" target="_blank" rel="noopener"><img src="images/dogpatch-food-map.png"
            alt="A second map of San Francisco with arcs running to Dogpatch, labelled Breadbelly, Souvla, Standard Deviant and CoffeeShop"
-           loading="lazy" width="1101" height="1061">
+           loading="lazy" width="1101" height="1061"></a>
       <figcaption>And the same pattern in Dogpatch.</figcaption>
     </figure>
     <p class="meta">Maps for Mission Local &middot; Reporting by Nicholas David
@@ -432,9 +440,9 @@
     building has stood boarded since 2022. Several of the covered windows breach
     the city's transparency code.</p>
     <figure>
-      <img src="images/16th-mission-storefronts.jpg"
+      <a href="https://missionlocal.org/2026/04/bart-plazas-redesign-16th-mission-sf/" target="_blank" rel="noopener"><img src="images/16th-mission-storefronts.jpg"
            alt="Axonometric drawing of the 16th and Mission intersection in San Francisco with every ground-floor frontage coloured by condition: green for clear windows, olive for covered windows, charcoal for blank wall or vacant lot, with charcoal and olive dominating"
-           loading="lazy" width="1400" height="972">
+           loading="lazy" width="1400" height="972"></a>
       <figcaption>Ground-floor frontage around the plazas, 2026.</figcaption>
     </figure>
     <p class="meta">Map for Mission Local &middot; Reporting by H.R. Smith
@@ -455,9 +463,9 @@
     stores. Younger owners call it an older-immigrant habit &mdash; until one of
     them says she would do anything to keep her business going.</p>
     <figure class="drop-1">
-      <img src="images/grand-opening-sign.jpg"
+      <a href="https://missionlocal.org/2026/05/sf-sunset-chinese-groceries-grand-opening-signs/" target="_blank" rel="noopener"><img src="images/grand-opening-sign.jpg"
            alt="A weathered GRAND OPENING banner hanging beneath the sign for Siu Wah Food Inc. on Irving Street, traffic passing in front"
-           loading="lazy" width="1200" height="800">
+           loading="lazy" width="1200" height="800"></a>
       <figcaption>Siu Wah Food, Irving Street. Photo: Zoe Malen.</figcaption>
     </figure>
     <p class="meta">Mission Local &middot; Additional reporting by Junyao Yang
@@ -478,18 +486,18 @@
     the term &ldquo;Georgian mosque,&rdquo; documents the buildings and crowdfunds
     repairs; she sometimes finds the doors chained.</p>
     <figure class="drop-1">
-      <img src="images/IMG_3381.jpg"
+      <a href="https://ihumenyuk.github.io/batumi-mosque/" target="_blank" rel="noopener"><img src="images/IMG_3381.jpg"
            alt="A painted mosque dome seen from below, a floral rosette ringed by bands of ornament"
-           loading="lazy" width="1000" height="750">
+           loading="lazy" width="1000" height="750"></a>
       <figcaption>A painted dome, Adjara.</figcaption>
     </figure>
     <figure class="pair">
-      <img src="images/IMG_3239.jpg"
+      <a href="https://ihumenyuk.github.io/batumi-mosque/" target="_blank" rel="noopener"><img src="images/IMG_3239.jpg"
            alt="A window cut through a thick stone wall, opening onto hills and a village beyond"
-           loading="lazy" width="750" height="1000">
-      <img src="images/IMG_3339.jpg"
+           loading="lazy" width="750" height="1000"></a>
+      <a href="https://ihumenyuk.github.io/batumi-mosque/" target="_blank" rel="noopener"><img src="images/IMG_3339.jpg"
            alt="A carved wooden door set into a stone wall, crossed by the shadow of a tree"
-           loading="lazy" width="750" height="1000">
+           loading="lazy" width="750" height="1000"></a>
       <figcaption>A window cut through stone; a carved door.</figcaption>
     </figure>
     <p class="meta">Columbia thesis &middot; Reported in Georgia &middot;
@@ -513,9 +521,9 @@
     order goes wrong the penalty falls on whoever lent the papers, not on whoever
     made the delivery.</p>
     <figure class="drop-1">
-      <img src="images/deliveristas-doordash.jpg"
+      <a href="https://www.uptownradio.org/post/pay-raises-exploit-loopholes-delivery-app-workers-report" target="_blank" rel="noopener"><img src="images/deliveristas-doordash.jpg"
            alt="Delivery workers with e-bikes rallying in New York behind a banner reading DoorDash, follow the law: pay delivery workers what they're owed"
-           loading="lazy" width="1200" height="675">
+           loading="lazy" width="1200" height="675"></a>
       <figcaption>Los Deliveristas Unidos protest wage theft at DoorDash, New York.
       Not from this story &mdash; photo by Eden, Janine and Jim, CC BY 2.0.</figcaption>
     </figure>
@@ -538,9 +546,9 @@
     arrived earlier. One man, asked how often he got outside during nineteen months
     in detention, answered: once.</p>
     <figure class="drop-1 mono">
-      <img src="images/darien-jungle.jpg"
+      <a href="https://columbianewsservice.com/2023/11/06/venezuelan-migrants-have-hope-but-field-resentment-amidst-policy-changes/" target="_blank" rel="noopener"><img src="images/darien-jungle.jpg"
            alt="A vast ceiba tree rising out of dense rainforest in the Darien Gap, a figure standing at its base for scale"
-           loading="lazy" width="900" height="1350">
+           loading="lazy" width="900" height="1350"></a>
       <figcaption>The Dari&eacute;n Gap, on the route north. Not from this story
       &mdash; photo by Gustavo Ross, CC&nbsp;BY-SA&nbsp;4.0.</figcaption>
     </figure>
@@ -561,9 +569,9 @@
     at the centre of rebuilding Ukraine; and earlier, forty-plus articles for Frame
     in Amsterdam on sustainability and public policy in architecture.</p>
     <figure class="drop-1">
-      <img src="images/haldenby-rome.jpg"
+      <a href="https://www.azuremagazine.com/article/the-house-that-rick-haldenby-built/" target="_blank" rel="noopener"><img src="images/haldenby-rome.jpg"
            alt="Rick Haldenby lecturing to students in a Renaissance theatre in Italy, arm raised, a shaft of light falling across the tiers behind him"
-           loading="lazy" width="800" height="1200">
+           loading="lazy" width="800" height="1200"></a>
       <figcaption>Haldenby lecturing in Italy. Photo: Wesley Zhu.</figcaption>
     </figure>
     <p class="meta">Azure &middot; The Architect's Newspaper &middot; Frame
