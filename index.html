@@ -148,6 +148,9 @@
   .narrow img{ width:72% }
   .half img{ width:56% }
 
+  /* a single photograph shown in monochrome; the file itself is untouched */
+  .mono img{ filter:grayscale(1) contrast(1.08) }
+
   /* two photographs side by side, so a column can carry three frames
      in the height one full-width portrait would take */
   .pair{ display:grid; grid-template-columns:1fr 1fr; gap:5px }
@@ -534,7 +537,7 @@
     for Venezuelans, a $545 fee most cannot pay, and resentment from migrants who
     arrived earlier. One man, asked how often he got outside during nineteen months
     in detention, answered: once.</p>
-    <figure class="drop-1">
+    <figure class="drop-1 mono">
       <img src="images/darien-jungle.jpg"
            alt="A vast ceiba tree rising out of dense rainforest in the Darien Gap, a figure standing at its base for scale"
            loading="lazy" width="900" height="1350">
